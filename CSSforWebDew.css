@@ -73,7 +73,7 @@ footer {
     height: 120px;
 }
 
-@media (min-width: 768px) {
+@media (width > 768px) {
     body {
         width: 95%;
         margin: 0 auto;
@@ -148,4 +148,5 @@ footer {
         padding: 10px;
         height: 120px;
     }
+
 }
