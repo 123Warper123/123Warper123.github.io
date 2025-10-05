@@ -1,6 +1,21 @@
 body {
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap:wrap;
+    width: 100vw;
     margin: 0;
+}
+
+.pict{
+    width:80%;
+}
+
+.dnav {
+    order: -2;
+    width: 100%;
+    background-color: #b0ffbe;
+    margin-top: 10px;
+    padding: 10px;
 }
 
 ul.nav {
@@ -10,12 +25,13 @@ ul.nav {
 }
 
 .nav li {
-    float: right;
+    display: flex;
+    justify-content:space-around;
 }
 
 ul.nav a {
-    display: block;
-    width: 5em;
+    width: 60%;
+    font-size: 2rem;
     padding: 10px;
     margin: 0 5px;
     background-color: #f4f4f4;
@@ -31,6 +47,7 @@ ul.nav a {
     }
 
 .header1 {
+    order:-1;
     width: 100%;
     background-color: #00c1ff;
     padding: 10px;
@@ -38,11 +55,15 @@ ul.nav a {
 }
 
 .header2 {
+    order: -2;
     background-color: #b6ff00;
     padding: 10px;
+    height: 30%;
+    font-size: 2rem;
 }
 
 .logo {
+    order: -3;
     float: left;
     margin: 10px;
     width: 100px;
@@ -50,16 +71,15 @@ ul.nav a {
 }
 
 .main {
-    max-width: 960px;
+    width: 100%;
     background-color: #b0ffbe;
-    margin: 0 auto;
-    margin-top: 20px;
+    margin-top: 10px;
     padding: 10px;
 }
 
 table {
-    margin: 0 auto;
-    width: 960px;
+    order:-4;
+    width: 100%;
     background-color: #b0ffbe;
     text-align: center;
     margin-top: 20px;
@@ -79,6 +99,14 @@ footer {
         margin: 0 auto;
     }
 
+    .dnav {
+        max-width: 960px;
+        background-color: #b0ffbe;
+        margin: 0 auto;
+        margin-top: 20px;
+        padding: 10px;
+    }
+
     ul.nav {
         margin-left: 0px;
         padding-left: 0px;
@@ -86,12 +114,15 @@ footer {
     }
 
     .nav li {
-        float: right;
+        float: left;
+        position: relative;
+        left: +10%;
     }
 
     ul.nav a {
-        display: block;
-        width: 5em;
+        display:inline-block;
+        width:10em;
+        font-size:1rem;
         padding: 10px;
         margin: 0 5px;
         background-color: #f4f4f4;
@@ -134,6 +165,7 @@ footer {
     }
 
     table {
+        order: 0;
         margin: 0 auto;
         width: 960px;
         background-color: #b0ffbe;
@@ -148,6 +180,4 @@ footer {
         padding: 10px;
         height: 120px;
     }
-
 }
-
