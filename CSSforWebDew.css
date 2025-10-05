@@ -11,7 +11,6 @@ body {
 }
 
 .dnav {
-    order: -2;
     width: 100%;
     background-color: #b0ffbe;
     margin-top: 10px;
@@ -47,7 +46,6 @@ ul.nav a {
     }
 
 .header1 {
-    order:-1;
     width: 100%;
     background-color: #00c1ff;
     padding: 10px;
@@ -55,7 +53,6 @@ ul.nav a {
 }
 
 .header2 {
-    order: -2;
     background-color: #b6ff00;
     padding: 10px;
     height: 30%;
@@ -63,7 +60,6 @@ ul.nav a {
 }
 
 .logo {
-    order: -3;
     float: left;
     margin: 10px;
     width: 100px;
@@ -78,7 +74,7 @@ ul.nav a {
 }
 
 table {
-    order:-4;
+    order:-3;
     width: 100%;
     background-color: #b0ffbe;
     text-align: center;
