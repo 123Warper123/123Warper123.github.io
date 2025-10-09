@@ -1,8 +1,8 @@
 body {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    width: 100%;
+    flex-wrap:wrap;
+    width: 100vw;
     margin: 0;
 }
 
@@ -18,26 +18,31 @@ body {
 }
 
 ul.nav {
-    margin-left: 0px;
-    padding-left: 0px;
+    margin: 0;
+    padding: 0;
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
 .nav li {
+    width: 100%;
     display: flex;
-    justify-content:space-around;
+    justify-content: center;
 }
 
 ul.nav a {
-    width: 60%;
-    font-size: 2rem;
-    padding: 10px;
-    margin: 0 5px;
+    width: 90%;
+    font-size: 1.5rem;
+    padding: 15px 20px;
     background-color: #f4f4f4;
     border: 1px groove #333;
     text-decoration: none;
     color: #333;
     text-align: center;
+    transition: all 0.3s ease;
 }
 
     ul.nav a:hover {
@@ -67,23 +72,19 @@ ul.nav a {
 }
 
 .main {
-    order: 4;
+    order:4;
     width: 100%;
     background-color: #b0ffbe;
     margin-top: 10px;
     padding: 10px;
 }
 
-.t-cont{
+table {
     order:3;
     width: 100%;
-    margin-top: 20px;
-}
-
-table {
-    width:100%;
     background-color: #b0ffbe;
     text-align: center;
+    margin-top: 20px;
     border: 1px solid #000000;
 }
 
@@ -103,41 +104,40 @@ footer {
 
     .dnav {
         max-width: 960px;
-        background-color: #b0ffbe;
-        margin: 0 auto;
-        margin-top: 20px;
-        padding: 10px;
+        margin: 20px auto;
+        padding: 15px;
     }
 
     ul.nav {
-        margin-left: 0px;
-        padding-left: 0px;
+        all: unset;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
         list-style: none;
     }
 
     .nav li {
-
-        position: relative;
-        left: +10%;
+        
     }
 
     ul.nav a {
-        display:inline-block;
-        width:10em;
-        font-size:1rem;
-        padding: 10px;
-        margin: 0 5px;
+        all: unset;
+        display: block;
+        width: 140px;
+        padding: 12px 20px;
         background-color: #f4f4f4;
         border: 1px groove #333;
         text-decoration: none;
         color: #333;
         text-align: center;
+        cursor: pointer;
+        font-size: 1.1rem;
     }
 
-     ul.nav a:hover {
-         background-color: #333;
-         color: #f4f4f4;
-     }
+        ul.nav a:hover {
+            background-color: #333;
+            color: #f4f4f4;
+        }
 
     .header1 {
         width: 100%;
@@ -159,6 +159,7 @@ footer {
     }
 
     .main {
+        order:0;
         max-width: 960px;
         background-color: #b0ffbe;
         margin: 0 auto;
@@ -166,16 +167,10 @@ footer {
         padding: 10px;
     }
 
-    .t-cont {
-        order: 0;
-        width: 100%;
-        margin-top: 20px;
-    }
-
     table {
+        order: 0;
         margin: 0 auto;
-        width: 100%;
-        max-width: 960px;
+        width: 960px;
         background-color: #b0ffbe;
         text-align: center;
         margin-top: 20px;
@@ -183,6 +178,7 @@ footer {
     }
 
     footer {
+        order: 0;
         width: 100%;
         background-color: #00c1ff;
         padding: 10px;
