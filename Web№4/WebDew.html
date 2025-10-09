@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+	<title>MyWebDew</title>
+</head>
+<body>
+	<nav class="navbar navbar-light bg-light">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">
+				<img src="logo.png" alt="" width="100" height="100" class="d-inline-block align-text-top">
+				MyWebDew
+			</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavDropdown">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" aria-current="page" href="#">О нас</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Обратная связь</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Прифиль</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+		<div class="container">
+			Список ссылок:
+			<ol>
+				<li id="first">Абсолютная гиперссылка на главную страницу сайта <a href="http://www.kubsu.ru/" title="Официальный сайт Кубанского государственного университета">КубГУ</a></li>
+				<li>Абсолютная гиперссылка по протоколу https на главную страницу сайта <a href="https://www.kubsu.ru/" title="Официальный сайт Кубанского государственного университета">КубГУ</a></li>
+				<li>
+					Ссылка-изображение:<br>
+					<a href="https://www.kubsu.ru/" title="Официальный сайт Кубанского государственного университета"><img class="pict" src="lower.jpg" alt="цветок"></a>
+				</li>
+				<li>Сокращенная ссылка на внутреннюю страницу <a href="Контент.html" title="Контент">Контент</a></li>
+				<li>Сокращенная ссылка на главную страницу <a href="Задание1.html" title="На главную">Главная страница</a></li>
+				<li>Ссылка на фрагмант текущей страницы <a href="#first" title="К началу...">К началу...</a></li>
+				<li>Ссылка на фрагмант текущей страницы <a href="#first" title="К началу...">К началу...</a></li>
+				<li>Ссылка с тремя параметрами в URL <a href="#first?param1=value1&param2=value2&param3=value3" title="К началу...">К началу...</a></li>
+				<li id="second">Ссылка с параметром id <a href="http://www.kubsu.ru/" title="Официальный сайт Кубанского государственного университета">КубГУ</a></li>
+				<li><a href="/Как_жарить_стейк">Ссылка</a> относительная на страницу в текущем каталоге</li>
+				<li><a href="about/Как_жарить_стейк.pdf">Ссылка</a> относительная на страницу в каталоге about</li>
+				<li><a href="../Как_жарить_стейк.pdf">Ссылка</a> относительная на страницу на уровень выше текущей </li>
+				<li>Относительная <a href="../../Как_жарить_стейк.pdf"> Ссылка</a> на страницу на 2 уровня выше текущей</li>
+				<li>Контекстная <a href="../../Как_жарить_стейк.pdf">Ссылка</a> в тексте абзаца</li>
+				<li><a href="https://www.kubsu.ru/ru/sveden/common#:~:%D0%BE&%D0%BC%D0%B5%D1%81%D1%82%D0%B0%D1%85&%D0%BE%D1%81%D1%83%D1%89%D0%B5%D1%81%D1%82%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F.&text=%D0%A1%D0%B2%D0%B8%D0%B4%D0%B5%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D1%82%D0%B2%D0%BE%20%D0%BE%20%D0%B3%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D0%B9%20%D0%B0%D0%BA%D0%BA%D1%80%D0%B5%D0%B4%D0%B8%D1%82%D0%B0%D1%86%D0%B8%D0%B8">Ссылка</a> на фрагмент стртаницы стороннего сайта</li>
+				<li>
+					<br>
+					<img class="pict" src="lower.jpg" alt="ea" usemap="#mmap">
+					<map name="mmap">
+						<area shape="circle" coords="350,250,30" href="https://www.kubsu.ru/" alt="ea">
+						<area shape="rect" coords="300,300,600,840" href="https://www.kubsu.ru/" alt="ea">
+					</map>
+				</li>
+				<li><a href="#no_scroll">Ссылка</a> с пустым href</li>
+				<li><a onclick="myFunction()" id="link1" style="color: blue;">Ссылка</a> без href</li>
+				<li><a href="https://www.kubsu.ru/" rel="nofollow">Ссылка</a> запрещенная для индексации поисковиками</li>
+				<li>Нумерованный список ссылок с подписями title уже есть</li>
+				<li><a href="ftp://ftp.example.com/file.zip">Ссылка</a>  на файл на сервере FTP с авторизацией</li>
+			</ol>
+		</div>
+		<div class="t-cont">
+			<table>
+				<tr>
+					<td>Должность</td>
+					<td>ФИО</td>
+					<td>Адрес</td>
+					<td>e-mail</td>
+				</tr>
+				<tr>
+					<td>Управление кадров</td>
+					<td>Сюр Сергей Сергеевич</td>
+					<td>Краснодар</td>
+					<td>personal@kubsu.ru</td>
+				</tr>
+				<tr>
+					<td>Управление комплексной безопасности</td>
+					<td>Иванов Иван Иванович</td>
+					<td>Краснодар</td>
+					<td>ub@kubsu.ru</td>
+				</tr>
+				<tr>
+					<td>Важный текст</td>
+					<td>Важный текст</td>
+					<td>Важный текст</td>
+					<td>Важный текст</td>
+				</tr>
+				<tr>
+					<td>Важный текст</td>
+					<td>Важный текст</td>
+					<td>Важный текст</td>
+					<td>Важный текст</td>
+				</tr>
+				<tr>
+					<td>Важный текст</td>
+					<td>Важный текст</td>
+					<td>Важный текст</td>
+					<td>Важный текст</td>
+				</tr>
+			</table>
+		</div>
+		<script>function myFunction() { alert('Click!'); }</script>
+
+		<form class="main" action="URL_отправки_данных"
+			  method="get">
+			<label>
+				Введите ФИО:<br>
+				<input name="field-name-1"
+					   placeholder="Иванов Иван Иванович">
+			</label><br>
+			<label>
+				Введите телефон:<br>
+				<input name="field-tel"
+					   value="+7"
+					   type="tel">
+			</label><br>
+			<label>
+				Введите email:<br>
+				<input name="field-email"
+					   type="email"
+					   placeholder="example@mail.ru">
+			</label><br>
+			<label>
+				Введите свою дату рождения:<br>
+				<input name="field-date"
+					   type="date">
+			</label><br>
+			Ваш пол:<br>
+			<label>
+				<input type="radio"
+					   name="male" value="Мужчина">
+				Мужчина
+			</label>
+			<label>
+				<input type="radio"
+					   name="female" value="Женщина">
+				Женшина
+			</label><br>
+			<label>
+				Ваш любимый язык программирования:
+				<br>
+				<select name="C-Lang"
+						multiple="multiple">
+					<option value="Pascal">Pascal</option>
+					<option value="C" selected="selected">C
+					<option value="C++" selected="selected">C++
+					<option value="JavaScript" selected="selected">JavaScript
+					<option value="PHP" selected="selected">PHP
+					<option value="Python" selected="selected">Python
+					<option value="Java" selected="selected">Java
+					<option value="Haskel" selected="selected">Haskel
+					<option value="Clojure" selected="selected">Clojure
+					<option value="Prolog" selected="selected">Prolog
+					<option value="Scala" selected="selected">Scala
+				</select>
+			</label><br>
+			<label>
+				Расскажите о себе:<br>
+				<textarea name="text"></textarea>
+			</label><br>
+			<br>
+			<label>
+				С контрактом ознакомлен.
+				<input type="checkbox"
+					   name="contract">
+			</label><br>
+			<input type="submit" value="Отправить">
+		</form>
+
+		<footer>
+			<div class="header2">(C) Григорьев Вячеслав В.</div>
+		</footer>
+</body>
