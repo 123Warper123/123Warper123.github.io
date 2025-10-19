@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <script src="script.js"></script>
+    <title>Калькулятор</title>
+</head>
+<body>
+    Выберите товар:
+    <br>
+    <form>
+        <select id="Sel" name="selector">
+            <option value = "0">Столешница</option>
+            <option value="50">Обои</option>
+            <option value="500">Стеклопакет</option>
+        </select>
+
+        <div id="Stol" style="display: block">
+            <label><input type="radio" name="woodType" value="390">Дуб</label>
+            <label><input type="radio" name="woodType" value="327">Кедр</label>
+            <label><input type="radio" name="woodType" value="400">Орешник</label>
+        </div>
+        <div id="Oboi" style="display: none">
+            <label><input type="radio" name="oboiType" value="55">Океанские мотивы</label>
+            <label><input type="radio" name="oboiType" value="53">Лесное умиротворение</label>
+            <label><input type="radio" name="oboiType" value="49">Альпийские просторы</label>
+        </div>
+        <div id="Wndw" style="display: none">
+            <label><input type="checkbox" name="DopType" value="300">Доп. теплоизоляция</label>
+            <label><input type="checkbox" name="DopType" value="150">Форточка</label>
+            <label><input type="checkbox" name="DopType" value="200">Евро-Гарантия</label>
+        </div>
+        <br>
+        <div id="Craft">
+            <label><input type="checkbox" name="craftCheck1" value="150">Доставка</label>
+            <label id="place" style="display: none"><input type="checkbox" name="craftCheck2" value="300">Установка</label>
+        </div>
+    </form>
+
+    <br>
+    <input id="kol" placeholder="Укажите кол-во товара">
+    <br>
+
+    <br>
+    <button id="div" onclick="return Calculation();">Посчитать</button>
+    <div>
+        Стоимость =
+        <div id="price">
+            0
+        </div>
+    </div>
+
+</body>
+</html>
