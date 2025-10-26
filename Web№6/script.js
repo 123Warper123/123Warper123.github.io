@@ -20,25 +20,25 @@ window.addEventListener("DOMContentLoaded", function () {
             Wndw.style.display = "none";
             place.style.display = "none";
         }
-        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => { checkbox.checked = false; });
-        document.querySelectorAll('input[type="radio"]').forEach(radio => { radio.checked = false; });
+        document.querySelectorAll("input[type="checkbox"]").forEach(checkbox => { checkbox.checked = false; });
+        document.querySelectorAll("input[type="radio"]").forEach(radio => { radio.checked = false; });
         document.getElementById("price").innerHTML = 0 + " p.";
     });
 });
 
 function getSelectedWoodValue() {
-    const selected = document.querySelector('input[name="woodType"]:checked');
+    const selected = document.querySelector("input[name="woodType"]:checked");
     return selected ? selected.value : null;
 }
 function getSelectedOboiValue() {
-    const selected = document.querySelector('input[name="oboiType"]:checked');
+    const selected = document.querySelector("input[name="oboiType"]:checked");
     return selected ? selected.value : null;
 }
 function getSelectedStecloValues() {
     const num = /^\d+$/;
     let selectedValues = [];
     let sum = 0;
-    document.querySelectorAll('#Wndw input[type="checkbox"]:checked').forEach(checkbox => {
+    document.querySelectorAll("#Wndw input[type="checkbox"]:checked").forEach(checkbox => {
         selectedValues.push(checkbox.value);
     });
     if (num.test(parseInt(selectedValues[0])))
@@ -60,7 +60,7 @@ function Calculation() {
     console.log(prod);
     console.log(kol);
     if (!num.test(kol)) {
-        alert("Ошибка, введите кол-во корректно");
+        alert("ГЋГёГЁГЎГЄГ , ГўГўГҐГ¤ГЁГІГҐ ГЄГ®Г«-ГўГ® ГЄГ®Г°Г°ГҐГЄГІГ­Г®");
         return false;
     }
 
@@ -74,14 +74,15 @@ function Calculation() {
     }
     price += prod * kol;
 
-    if (document.querySelector('input[name="craftCheck1"]').checked) {
-        price += parseInt(document.querySelector('input[name="craftCheck1"]').value);
+    if (document.querySelector("input[name="craftCheck1"]").checked) {
+        price += parseInt(document.querySelector("input[name="craftCheck1"]").value);
     }
-    if (document.querySelector('input[name="craftCheck2"]').checked) {
-        price += parseInt(document.querySelector('input[name="craftCheck2"]').value);
+    if (document.querySelector("input[name="craftCheck2"]").checked) {
+        price += parseInt(document.querySelector("input[name="craftCheck2"]").value);
     }
 
     console.log(price);
     document.getElementById("price").innerHTML = price + " p.";
     return false;
+
 }
