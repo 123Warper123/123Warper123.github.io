@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+    <script src="Script.js"></script>
+    <title>Slider</title>
+</head>
+<body>
+    <div class="slider"
+         role="region"
+         aria-label="Паттерны">
+        <div class="controls"
+             role="group"
+             aria-label="Управление слайдами">
+            <button class="button button-radio"
+                    type="button"
+                    aria-current="true"
+                    aria-label="Показать 1 из 9">
+            </button>
+            <button class="button button-radio"
+                    type="button"
+                    aria-label="Показать 2 из 9">
+            </button>
+            <button class="button button-radio"
+                    type="button"
+                    aria-label="Показать 3 из 9">
+            </button>
+            <button class="button button-radio"
+                    type="button"
+                    aria-label="Показать 4 из 9">
+            </button>
+            <button class="button button-radio"
+                    type="button"
+                    aria-label="Показать 5 из 9">
+            </button>
+            <button class="button button-radio"
+                    type="button"
+                    aria-label="Показать 6 из 9">
+            </button>
+            <button class="button button-radio"
+                    type="button"
+                    aria-label="Показать 7 из 9">
+            </button>
+            <button class="button button-radio"
+                    type="button"
+                    aria-label="Показать 8 из 9">
+            </button>
+            <button class="button button-radio"
+                    type="button"
+                    aria-label="Показать 9 из 9">
+            </button>
+        </div>
+
+        <button aria-label="Предыдущий"
+                type="button"
+                class="button button-prev">
+        </button>
+        <button aria-label="Следующий"
+                type="button"
+                class="button button-next">
+        </button>
+
+        <div class="slides" aria-live="polite">
+            <div class="slide"
+                 role="group"
+                 aria-labelledby="item-1-label"
+                 id="carousel-item-1">
+                <img class="slide-img"
+                     src="./images/meme.jpg"
+                     alt="да">
+                <h2 id="item-1-label">1</h2>
+            </div>
+            <div class="slide"
+                 role="group"
+                 aria-labelledby="item-2-label"
+                 id="carousel-item-2">
+                <img class="slide-img"
+                     src="./images/meme.jpg"
+                     alt="да">
+                <h2 id="item-2-label">2</h2>
+            </div>
+            <div class="slide"
+                 role="group"
+                 aria-labelledby="item-3-label"
+                 id="carousel-item-3">
+                <img class="slide-img"
+                     src="./images/meme.jpg"
+                     alt="да">
+                <h2 id="item-3-label">3</h2>
+            </div>
+            <div class="slide"
+                 role="group"
+                 aria-labelledby="item-4-label"
+                 id="carousel-item-4">
+                <img class="slide-img"
+                     src="./images/meme.jpg"
+                     alt="да">
+                <h2 id="item-4-label">4</h2>
+            </div>
+            <div class="slide"
+                 role="group"
+                 aria-labelledby="item-5-label"
+                 id="carousel-item-5">
+                <img class="slide-img"
+                     src="./images/meme.jpg"
+                     alt="да">
+                <h2 id="item-5-label">5</h2>
+            </div>
+            <div class="slide"
+                 role="group"
+                 aria-labelledby="item-6-label"
+                 id="carousel-item-6">
+                <img class="slide-img"
+                     src="./images/meme.jpg"
+                     alt="да">
+                <h2 id="item-6-label">6</h2>
+            </div>
+            <div class="slide"
+                 role="group"
+                 aria-labelledby="item-7-label"
+                 id="carousel-item-7">
+                <img class="slide-img"
+                     src="./images/meme.jpg"
+                     alt="да">
+                <h2 id="item-7-label">7</h2>
+            </div>
+            <div class="slide"
+                 role="group"
+                 aria-labelledby="item-8-label"
+                 id="carousel-item-8">
+                <img class="slide-img"
+                     src="./images/meme.jpg"
+                     alt="да">
+                <h2 id="item-8-label">8</h2>
+            </div>
+            <div class="slide"
+                 role="group"
+                 aria-labelledby="item-9-label"
+                 id="carousel-item-9">
+                <img class="slide-img"
+                     src="./images/meme.jpg"
+                     alt="да">
+                <h2 id="item-9-label">9</h2>
+            </div>
+        </div>
+    </div>
+</body>

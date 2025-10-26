@@ -1,0 +1,154 @@
+.controls {
+    margin-block-end: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    position: relative;
+}
+
+body {
+    min-height: 100vh;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto", sans-serif;
+}
+
+.button {
+    cursor: pointer;
+    user-select: none;
+}
+
+.button-radio {
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    inline-size: 15px;
+    block-size: 15px;
+    border-radius: 50%;
+    border: 1px solid #000000;
+    transition: opacity 0.3s ease;
+}
+
+    .button-radio + .button-radio {
+        margin-inline-start: 0;
+    }
+
+    .button-radio.active {
+        background-color: #C56FFF;
+        pointer-events: none;
+    }
+
+    .button-radio:focus-visible {
+        outline: 3px solid white;
+        outline-offset: -1px;
+    }
+
+.button-prev,
+.button-next {
+    position: absolute;
+    inset-block-start: 50%;
+    transform: translateY(-50%);
+    border: none;
+    inline-size: 30px;
+    block-size: 42px;
+    background-color: transparent;
+    background-image: url(./images/arrow.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+    .button-prev[aria-disabled="true"],
+    .button-next[aria-disabled="true"] {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+.button-prev {
+    inset-inline-start: -50px;
+}
+
+.button-next {
+    inset-inline-end: -50px;
+    transform: translateY(-50%) rotateY(180deg);
+    transform-origin: center;
+}
+
+.slide-img {
+    display: block;
+    inline-size: 100%;
+    block-size: 340px;
+    max-block-size: 340px;
+    object-fit: cover;
+    min-inline-size: 100%;
+}
+
+.slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-inline-size: 900px;
+    inline-size: 100%;
+    position: relative;
+}
+
+.slides {
+    inline-size: 100%;
+    display: flex;
+    gap: 15px;
+    overflow: hidden;
+}
+
+.slide {
+    flex: 0 0 calc(33.333% - 10px);
+    display: block;
+    text-align: center;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+.slide--active {
+    opacity: 1;
+}
+
+@media (min-width: 769px) {
+    .button-radio:nth-child(n+4) {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .controls {
+        gap: 8px;
+    }
+
+    .slide {
+        flex: 0 0 100%;
+    }
+
+        .slide:not(.slide--active) {
+            display: none;
+        }
+
+    .slider {
+        max-inline-size: 260px;
+    }
+
+    .slide-img {
+        block-size: 400px;
+    }
+
+    .button-prev {
+        inset-inline-start: -40px;
+    }
+
+    .button-next {
+        inset-inline-end: -40px;
+    }
+
+    .button-radio {
+        display: block;
+    }
+}
