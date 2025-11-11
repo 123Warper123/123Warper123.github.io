@@ -20,8 +20,8 @@ window.addEventListener("DOMContentLoaded", function () {
             Wndw.style.display = "none";
             place.style.display = "none";
         }
-        document.querySelectorAll("input[type="checkbox"]).forEach(checkbox => { checkbox.checked = false; });
-        document.querySelectorAll("input[type="radio"]).forEach(radio => { radio.checked = false; });
+        document.querySelectorAll("input[type="checkbox"]").forEach(checkbox => { checkbox.checked = false; });
+        document.querySelectorAll("input[type="radio"]").forEach(radio => { radio.checked = false; });
         document.getElementById("price").innerHTML = 0 + " p.";
     });
 });
@@ -86,4 +86,5 @@ function Calculation() {
     return false;
 
 }
+
 
